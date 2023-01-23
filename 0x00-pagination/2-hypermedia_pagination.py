@@ -50,6 +50,8 @@ class Server:
             "prev_page": page - 1 if page > 1 else None,
             "total_pages": total_pages
         }
+
+
 def index_range(page: int, page_size: int) -> tuple:
     """Returns the first and last index"""
     return ((page - 1) * page_size, page * page_size)
