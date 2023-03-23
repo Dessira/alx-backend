@@ -35,7 +35,7 @@ class MRUCache(BaseCaching):
                 self.keys.append(self.keys.pop(self.keys.index(key)))
             if len(self.keys) > BaseCaching.MAX_ITEMS:
                 discard = self.keys.pop(-2)
-[O                del self.cache_data[discard]
+                del self.cache_data[discard]
                 print('DISCARD: {:s}'.format(discard))
 
     def get(self, key):
